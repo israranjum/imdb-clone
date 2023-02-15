@@ -28,7 +28,7 @@ const DarkModeSwitch = () => {
           />
         ))}
     </>
-  ); 
+  );
 };
 
 export default DarkModeSwitch;
