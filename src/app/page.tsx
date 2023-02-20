@@ -16,7 +16,7 @@ export default async function Home({ searchParams }: { searchParams: any }) {
   const data = await res.json();
   const results = data.results;
 
-  console.log(results);
+  // console.log(results);
   return (
     <div>
       <Results results={results} />
