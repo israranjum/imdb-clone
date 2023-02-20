@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-async function getMovie(movieId: any) {
+async function getServerSideProps(movieId: any) {
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.API_KEY}`
   );
@@ -9,7 +9,7 @@ async function getMovie(movieId: any) {
 
 export default async function MoviePage({ params }: { params: any }) {
   const movieId = params.id;
-  const movie = await getMovie(movieId);
+  const movie = await getServerSideProps(movieId);
   return (
     <main>
       <div className="w-full">
